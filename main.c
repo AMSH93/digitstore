@@ -1,5 +1,5 @@
 #include <stdio.h>
 
-void main(){
+int main(){
 	printf("Digitstore v0.1.0\n");
 }

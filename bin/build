@@ -1,2 +1,4 @@
 #!/bin/bash
-gcc *.c -o build/digitstore
+rm -rf build
+mkdir build
+gcc *.c -ansi -o build/digitstore
