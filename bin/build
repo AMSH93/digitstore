@@ -1,4 +1,11 @@
+#shbang line
 #!/bin/bash
+
+#removes build folder
 rm -rf build
+
+#make build folder
 mkdir build
+
+#compiled all c files into digitstore folder, o means output
 gcc *.c -ansi -o build/digitstore
