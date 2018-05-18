@@ -1,4 +1,3 @@
-#shbang line
 #!/bin/bash
 
 #removes build folder
