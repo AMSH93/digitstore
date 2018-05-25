@@ -1,3 +1,6 @@
+#ifndef STORAGESLL
+#define STORAGESLL
+
 /*Storage, Singly Linked List; DigitStore*/
 /*definitions*/
 typedef struct item item;
@@ -19,3 +22,4 @@ char* get(int pvalue);
 /*delete, note wont return confirmation*/
 void clear(int pvalue);
 
+#endif
