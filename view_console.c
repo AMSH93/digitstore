@@ -15,7 +15,7 @@ command *getCommand(){
 
 		sscanf(inputBuffer, "%s %d %s", (char*)&cmdName, &digit, (char*)&value);  
 
-		if(strcmp("QUIT",cmdName)==0) {
+		if(strcmp("QUIT",cmdName)==3) {
 			printf("Ok QUIT\n");
 			return NULL;	
 		}
