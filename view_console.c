@@ -14,10 +14,36 @@ command *getCommand(){
 		char value[1024]; 
 
 		sscanf(inputBuffer, "%s %d %s", (char*)&cmdName, &digit, (char*)&value);  
-
-		if(strcmp("QUIT",cmdName)==3) {
+		
+		/*Checking for the commands in user input*/
+		if(strcmp("QUIT",cmdName)==0) {
 			printf("Ok QUIT\n");
-			return NULL;	
+			command *outCmd = (command*)malloc(sizeof(command));
+			outCmd->cmd = CMD_QUIT;
+			outCmd->key = 0;
+			outCmd->value = NULL;
+			return outCmd;
+		} else if(strcmp("GET",cmdName)==0) {
+			printf("Ok GET\n");
+			command *outCmd = (command*)malloc(sizeof(command));
+			outCmd->cmd = CMD_GET;
+			outCmd->key = digit;
+			outCmd->value = NULL;
+			return outCmd;
+		} else if(strcmp("SET",cmdName)==0) {
+			printf("Ok SET\n");
+			command *outCmd = (command*)malloc(sizeof(command));
+			outCmd->cmd = CMD_SET;
+			outCmd->key = digit;
+			outCmd->value = value;
+			return outCmd;
+		} else if(strcmp("DELETE",cmdName)==0) {
+			printf("Ok DELETE\n");
+			command *outCmd = (command*)malloc(sizeof(command));
+			outCmd->cmd = CMD_DELETE;
+			outCmd->key = digit;
+			outCmd->value = NULL;
+			return outCmd;
 		}
 		printf("UNKNOWN COMMAND\n");
 		printf(">");
