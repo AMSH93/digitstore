@@ -21,7 +21,7 @@ typedef struct command {
 /*Output:*/
 typedef struct output {
 	bool success;
-	int key;
+	int *key;
 	char *value;
 } output;
 

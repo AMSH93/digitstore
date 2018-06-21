@@ -1,6 +1,6 @@
 /*Digitstore */
 #include "common.h"
-
+#include <stdio.h>
 #ifndef VIEW_CONSOLE
 #define VIEW_CONSOLE true
 

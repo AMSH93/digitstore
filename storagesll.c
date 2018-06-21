@@ -26,3 +26,15 @@ void set(int pvalue, char* pname){
 	current->next = nitem;
 }
 
+/*get function*/
+char* get(int pvalue){
+	item *cur = root;
+	while (cur!=NULL){
+		if(cur->value==pvalue){
+			return cur->name;
+	}
+	cur=cur->next;
+	}
+	return NULL;
+}
+

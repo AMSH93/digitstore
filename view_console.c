@@ -48,4 +48,20 @@ command *getCommand(){
 		printf("UNKNOWN COMMAND\n");
 		printf(">");
 	}
-}	
+}
+
+void doOutput(output *out){
+	if(out->success){
+		printf("ok ");
+	}
+	else{printf("not found ");}
+
+	if(out->key){
+		printf("%d ", *(out->key));
+	}
+
+	if(out->value){
+		printf("%s ", out->value);
+	}
+	printf("\n");
+};	
