@@ -5,6 +5,7 @@
 
 char inputBuffer[1024];
 
+
 command *getCommand(){
 	while(TRUE) {
 		fgets((char *)&inputBuffer, 1024, stdin);
@@ -35,7 +36,7 @@ command *getCommand(){
 			command *outCmd = (command*)malloc(sizeof(command));
 			outCmd->cmd = CMD_SET;
 			outCmd->key = digit;
-			outCmd->value = value;
+			outCmd->value = toHeapStr(value);
 			return outCmd;
 		} else if(strcmp("DELETE",cmdName)==0) {
 			printf("Ok DELETE\n");
@@ -65,3 +66,9 @@ void doOutput(output *out){
 	}
 	printf("\n");
 };	
+
+char *toHeapStr(char *str){
+	char *out = (char*)malloc(strlen(str)+1);
+	strcpy (out, str);
+	return out;
+}

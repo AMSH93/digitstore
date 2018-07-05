@@ -38,3 +38,29 @@ char* get(int pvalue){
 	return NULL;
 }
 
+void delete(item **cur, int pvalue){
+	item **cur = &root;
+	while (cur != NULL){
+		if (cur->value==pvalue){
+			**cur->next = cur->next;
+			return NULL;
+		}
+		cur=cur->next;
+	}
+	return NULL;
+}
+
+/*
+void delete(int pvalue){
+	item **cur = &root;
+	while (cur!=NULL){
+		prev = &(**cur)->next;
+		if (cur->value==pvalue){
+			*prev->next=cur->next
+			return NULL
+		}
+	cur=cur->next;
+	}
+	return NULL
+}
+*/

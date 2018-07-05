@@ -15,6 +15,8 @@ and assigns a number to them. */
 
 command* getCommand();
 
+char *toHeapStr(char *str);
+
 void doOutput(output *out);
 
 #endif
